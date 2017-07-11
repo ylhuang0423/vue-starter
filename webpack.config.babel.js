@@ -90,7 +90,7 @@ const config = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery/dist/jquery.slim.min.js',
+      '$': 'jquery/dist/jquery.slim.min.js',
       jQuery: 'jquery/dist/jquery.slim.min.js',
     }),
   ],

@@ -7,7 +7,7 @@ import App from './vue/app.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
-Vue.prototype.$http = axios
+Vue.prototype.$axios = axios
 
 const router = new VueRouter({
   mode: 'history',
