@@ -42,17 +42,18 @@ const config = {
       },
       {
         test: /\.vue$/,
-        include: resolve('app/vue'),
+        include: resolve('app/comp'),
         use: {
           loader: 'vue-loader',
           options: {
+            preserveWhitespace: false,
             postcss: { plugins: [autoprefixer] },
             loaders: { js: 'babel-loader?' + JSON.stringify(babel) },
           },
         },
       },
       {
-        test: /\.(jpg|png|svg|mp3)$/,
+        test: /\.(jpg|png|svg)$/,
         include: resolve('app/res'),
         use: { loader: 'file-loader', options: { name: '[hash:7].[ext]', outputPath: 'res/', publicPath: '/' } },
       },
@@ -62,17 +63,15 @@ const config = {
         use: { loader: 'file-loader', options: { name: 'favicon.ico' } },
       },
 
-      // Bootstrap Grid
+      // Semantic UI
       {
         test: /\.css$/,
-        include: resolve('node_modules/bootstrap'),
+        include: resolve('node_modules/semantic-ui-reset'),
         use: [
           { loader: 'style-loader', options: { insertAt: 'top' } },
           { loader: 'css-loader' },
         ],
       },
-
-      // Semantic UI
       {
         test: /\.css$/,
         include: resolve('node_modules/semantic-ui-css'),
@@ -97,6 +96,15 @@ const config = {
   output: {
     path: resolve('public'),
     filename: 'app.js',
+  },
+  resolve: {
+    alias: {
+      app: resolve('app'),
+      res: resolve('app/res'),
+      '~src': resolve('app/src'),
+      '~res': resolve('app/res'),
+      '~comp': resolve('app/comp'),
+    },
   },
   devServer: {
     contentBase: false,

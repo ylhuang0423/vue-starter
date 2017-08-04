@@ -1,8 +1,6 @@
-import 'bootstrap/dist/css/bootstrap-grid.css'
-import 'semantic-ui-css/semantic.css'
-import 'semantic-ui-css/semantic.js'
+import 'semantic-ui-reset/reset.css'
 
-// import './favicon.ico'
-import './index.pug'
-import './app.sass'
-import './app.js'
+import '~src/index.pug'
+import '~src/app.sass'
+import '~src/app.js'
+// import '~src/favicon.ico'

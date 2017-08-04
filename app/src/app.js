@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import axios from 'axios'
 
-import App from './vue/app.vue'
+import App from '~comp/app.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
