@@ -53,7 +53,7 @@ const config = {
         },
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(gif|jpg|png|svg)$/,
         include: resolve('app/res'),
         use: { loader: 'file-loader', options: { name: '[hash:7].[ext]', outputPath: 'res/', publicPath: '/' } },
       },
