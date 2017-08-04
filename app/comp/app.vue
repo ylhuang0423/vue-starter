@@ -1,6 +1,5 @@
 <template lang="pug">
 #v-app
-  button.ui.button Button
 </template>
 
 <script>
