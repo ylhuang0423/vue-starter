@@ -11,14 +11,16 @@ const babel = {
 
 const config = {
   context: resolve('app'),
-  entry: './index.js',
+  entry: {
+    app: './index.js',
+  },
   module: {
     rules: [
       {
         test: /\.pug$/,
-        include: resolve('app'),
+        include: resolve('app/src'),
         use: [
-          { loader: 'file-loader', options: { name: '[name].html' } },
+          { loader: 'file-loader', options: { context: resolve('app/src'), name: '[path][name].html' } },
           { loader: 'extract-loader' },
           { loader: 'html-loader', options: { conservativeCollapse: false } },
           { loader: 'pug-html-loader', options: { pretty: true, exports: false } },
@@ -26,7 +28,7 @@ const config = {
       },
       {
         test: /\.sass$/,
-        include: resolve('app'),
+        include: resolve('app/src'),
         use: [
           { loader: 'file-loader', options: { name: '[name].css' } },
           { loader: 'extract-loader' },
@@ -37,7 +39,7 @@ const config = {
       },
       {
         test: /\.js$/,
-        include: resolve('app'),
+        include: resolve('app/src'),
         use: { loader: 'babel-loader', options: babel },
       },
       {
@@ -59,7 +61,7 @@ const config = {
       },
       {
         test: /favicon\.ico$/,
-        include: resolve('app'),
+        include: resolve('app/src'),
         use: { loader: 'file-loader', options: { name: 'favicon.ico' } },
       },
 
@@ -83,7 +85,7 @@ const config = {
       {
         test: /\.(eot|png|svg|ttf|woff2|woff)$/,
         include: resolve('node_modules/semantic-ui-css'),
-        use: { loader: 'file-loader', options: { name: 'res/[hash:7].[ext]' } },
+        use: { loader: 'file-loader', options: { name: '[hash:7].[ext]', outputPath: 'res/' } },
       },
     ],
   },
@@ -95,7 +97,7 @@ const config = {
   ],
   output: {
     path: resolve('public'),
-    filename: 'app.js',
+    filename: '[name].js',
   },
   resolve: {
     alias: {
