@@ -114,6 +114,7 @@ const config = {
     stats: 'minimal',
     inline: true,
     contentBase: false,
+    disableHostCheck: true,
     historyApiFallback: true,
     proxy: { '/api': 'http://localhost:8000' },
   },
