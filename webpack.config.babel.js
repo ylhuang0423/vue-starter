@@ -109,12 +109,13 @@ const config = {
     },
   },
   devServer: {
-    contentBase: false,
-    historyApiFallback: true,
     host: '0.0.0.0',
     port: 8080,
-    inline: true,
     stats: 'minimal',
+    inline: true,
+    contentBase: false,
+    historyApiFallback: true,
+    proxy: { 'api/': 'http://localhost:8000' },
   },
 }
 
