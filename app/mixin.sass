@@ -1,12 +1,14 @@
-=background($background-image, $background-size: cover, $background-repeat: null, $background-position: null)
+=background($background-image, $background-size: cover, $background-repeat: null, $background-position: center center)
   background-image: $background-image
   background-position: $background-position
   background-repeat: $background-repeat
   background-size: $background-size
 
-=size($width, $height: null)
-  height: $height
-  width: $width
+=flexbox($justify-content, $align-items: flex-start, $flex-direction: null)
+  align-items: $align-items
+  display: flex
+  flex-direction: $flex-direction
+  justify-content: $justify-content
 
 =font($font-size, $color: null, $line-height: null, $letter-spacing: null, $font-weight: null)
   color: $color
@@ -15,8 +17,13 @@
   letter-spacing: $letter-spacing
   line-height: $line-height
 
-=flexbox($justify-content, $align-items: flex-start, $flex-direction: null)
-  align-items: $align-items
-  display: flex
-  flex-direction: $flex-direction
-  justify-content: $justify-content
+=reset-button()
+  background-color: transparent
+  border: none
+  cursor: pointer
+  outline: none
+
+=size($width, $height: null)
+  height: $height
+  width: $width
+
