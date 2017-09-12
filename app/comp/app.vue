@@ -12,6 +12,6 @@ export default {
 @import '~app/mixin.sass'
 
 #v-app
-  height: 100%
+  min-height: 100%
 
 </style>
