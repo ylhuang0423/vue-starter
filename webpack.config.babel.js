@@ -44,7 +44,7 @@ const config = {
       },
       {
         test: /\.vue$/,
-        include: resolve('app/comp'),
+        include: [resolve('app/page'), resolve('app/comp')],
         use: {
           loader: 'vue-loader',
           options: {
@@ -105,6 +105,7 @@ const config = {
       res: resolve('app/res'),
       '~src': resolve('app/src'),
       '~res': resolve('app/res'),
+      '~page': resolve('app/page'),
       '~comp': resolve('app/comp'),
     },
   },
