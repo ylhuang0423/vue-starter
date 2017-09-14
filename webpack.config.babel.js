@@ -61,7 +61,7 @@ const config = {
       },
       {
         test: /favicon\.ico$/,
-        include: resolve('app/src'),
+        include: resolve('app/res'),
         use: { loader: 'file-loader', options: { name: 'favicon.ico' } },
       },
 
