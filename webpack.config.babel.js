@@ -101,7 +101,7 @@ const config = {
   },
   resolve: {
     alias: {
-      app: resolve('app'),
+      src: resolve('app/src'),
       res: resolve('app/res'),
       '~src': resolve('app/src'),
       '~res': resolve('app/res'),

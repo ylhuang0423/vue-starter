@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '~app/mixin.sass'
+@import '~src/mixin.sass'
 
 #v-app
   min-height: 100%
