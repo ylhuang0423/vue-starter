@@ -85,7 +85,7 @@ const config = {
       {
         test: /\.(eot|png|svg|ttf|woff2|woff)$/,
         include: resolve('node_modules/semantic-ui-css'),
-        use: { loader: 'file-loader', options: { name: '[hash:7].[ext]', outputPath: 'res/' } },
+        use: { loader: 'file-loader', options: { name: '[hash:7].[ext]', outputPath: 'res/', publicPath: '/' } },
       },
     ],
   },
