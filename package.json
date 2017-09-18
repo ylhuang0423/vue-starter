@@ -3,7 +3,8 @@
   "author": "Yen-Lin Huang <ylhuang0423@gmail.com>",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "axios": "^0.16.2",
