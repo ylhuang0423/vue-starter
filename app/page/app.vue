@@ -13,5 +13,4 @@ export default {
 
 #v-app
   min-height: 100%
-
 </style>
