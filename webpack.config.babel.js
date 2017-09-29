@@ -119,6 +119,7 @@ const config = {
     historyApiFallback: true,
     proxy: { '/api': 'http://localhost:8000' },
   },
+  devtool: 'source-map',
 }
 
 if(process.env.NODE_ENV === 'production') {
