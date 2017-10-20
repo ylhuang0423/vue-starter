@@ -12,6 +12,8 @@ Vue.prototype.$http = axios
 const router = new VueRouter({
   mode: 'history',
   routes: [
+    { path: '/', component: App },
+    { path: '*', redirect: '/' },
   ],
   scrollBehavior(to, from, saved) {
     return saved ? saved : { x: 0, y: 0 }
