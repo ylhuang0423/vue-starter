@@ -23,7 +23,7 @@ const config = {
           { loader: 'file-loader', options: { context: resolve('app/src'), name: '[path][name].html' } },
           { loader: 'extract-loader' },
           { loader: 'html-loader', options: { conservativeCollapse: false } },
-          { loader: 'pug-html-loader', options: { pretty: true, exports: false } },
+          { loader: 'pug-html-loader', options: { data: { hash: Math.random().toString(36).substr(2, 5) }, pretty: true, exports: false } },
         ],
       },
       {
