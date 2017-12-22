@@ -1,6 +1,9 @@
 {
   "name": "web-app-starter",
-  "author": "Yen-Lin Huang <ylhuang0423@gmail.com>",
+  "author": {
+    "name": "Yen-Lin Huang",
+    "email": "ylhuang0423@gmail.com"
+  },
   "scripts": {
     "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack",
