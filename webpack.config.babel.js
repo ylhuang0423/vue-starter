@@ -117,7 +117,7 @@ const config = {
     contentBase: false,
     disableHostCheck: true,
     historyApiFallback: true,
-    proxy: { '/api': 'http://localhost:8000' },
+    proxy: { '/api': 'http://localhost:3000' },
   },
   devtool: 'source-map',
 }
