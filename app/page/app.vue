@@ -1,5 +1,5 @@
 <template lang="pug">
-#v-app
+#v-app.app
 </template>
 
 <script>
@@ -11,6 +11,6 @@ export default {
 <style lang="sass" scoped>
 @import '~src/mixin.sass'
 
-#v-app
+.app
   height: 100%
 </style>
